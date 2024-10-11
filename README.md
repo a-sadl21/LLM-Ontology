@@ -7,7 +7,9 @@ Welcome to the LLM Ontology (LLMOnto) project! This repository contains an ontol
 This project was developed as part of our Masters programme at the University of Lorraine. The main goal is to offer a resource for students to understand LLMs without diving into overly technical details. The ontology organises concepts such as:
 
 -LLM architectures and components
+
 -Training methods and datasets
+
 -Application domains for NLP tasks
 
 🔍 Contents
