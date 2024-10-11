@@ -1,0 +1,847 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#"
+     xml:base="https://github.com/a-sadl21/LLM-Ontology/LLMOnto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:swemls="https://w3id.org/semsys/ns/swemls#">
+    <owl:Ontology rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#createdBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#createdBy">
+        <rdfs:comment>Links a model to the persone or organization responsible for its creation</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasActivationFunction -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasActivationFunction">
+        <rdfs:comment>Links a neural network to the activation(s) function(s) used in its computations</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasArchitecture -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasArchitecture">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Model"/>
+        <rdfs:range rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ModelArchitecture"/>
+        <rdfs:comment>Links a model to the specific architecture that defines its structure</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#isTrainedOn -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#isTrainedOn">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Model"/>
+        <rdfs:range rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset"/>
+        <rdfs:comment>Links a model to the data on which it has been trained</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#releasedBy -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#releasedBy">
+        <rdfs:comment>Links a model to the person or organization that has released it</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#usesAttentionMechanism -->
+
+    <owl:ObjectProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#usesAttentionMechanism">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkLanguageModel"/>
+        <rdfs:range rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#AttentionMechanism"/>
+        <rdfs:comment>Indicates whether a model uses the Attention Mechanism</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/semsys/ns/swemls#hasApplicationDomain -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/semsys/ns/swemls#hasApplicationDomain">
+        <rdfs:range rdf:resource="https://w3id.org/semsys/ns/swemls#ApplicationDomain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/semsys/ns/swemls#hasTask -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/semsys/ns/swemls#hasTask">
+        <rdfs:range rdf:resource="https://w3id.org/semsys/ns/swemls#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/semsys/ns/swemls#hasTrainingType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/semsys/ns/swemls#hasTrainingType">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/semsys/ns/swemls#TrainingType"/>
+        <rdfs:comment>Links a model to the type of training method applied</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasLanguage -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasLanguage">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+        <rdfs:comment>Specifies the language in which the content or data of a model is expressed</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasPositionalEncoding -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasPositionalEncoding">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TransformerArchitecture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether a model architecture uses positional encoding</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#isOpenSource -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#isOpenSource">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Indicates whether a model is Open Source or proprietary</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numAttentionHeads -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numAttentionHeads">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#AttentionMechanism"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Indicates the number of attention heads used by an architecture that uses the attention mechanism</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numLayers -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numLayers">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkArchitecture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Indicates the number of layers implemented by a model with neural network architecture</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numParameters -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numParameters">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ModelArchitecture"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Indicates the number of parameters of a model architecture</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#trainingSize -->
+
+    <owl:DatatypeProperty rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#trainingSize">
+        <rdfs:domain rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset"/>
+        <rdfs:comment>Size of text dataset expressed as number of words</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1#Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1#Organization">
+        <rdfs:comment>structured group of people or entities working together towards a common goal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1#Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1#Person">
+        <rdfs:comment>individual human being with distinct physical, cognitive, and social attributes and who is capable of independent action and thought</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction">
+        <rdfs:comment>Mathematical operation applied to the output of a neural network node to introduce non-linearity into the model and determine whether a neuron should be activated based on the input it receives</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ArtificialNeuralNetwork -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ArtificialNeuralNetwork">
+        <rdfs:comment>Computational model inspired by the biological neural networks in the brain consisting of interconnected layers of neurons</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#AttentionMechanism -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#AttentionMechanism">
+        <rdfs:comment>Computational technique that allows models to focus selectively on different parts of input data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#CNNArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#CNNArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DeepLearningArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset">
+        <rdfs:comment>Collection of data used for training, validating, and testing a model</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DecoderArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DecoderArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TransformerArchitecture"/>
+        <owl:disjointWith rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderDecoderArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DeepLearningArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DeepLearningArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkArchitecture"/>
+        <rdfs:comment>design of a deep neural network</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TransformerArchitecture"/>
+        <owl:disjointWith rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderDecoderArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderDecoderArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderDecoderArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TransformerArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#GNNArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#GNNArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DeepLearningArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LanguageModel -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LanguageModel">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Model"/>
+        <rdfs:comment>Mathematical or computational representation of a system or process used in NLP to make predictions or decisions based on language input data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkLanguageModel"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#isTrainedOn"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#trainingSize"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                        <owl:withRestrictions rdf:parseType="Collection">
+                                            <rdf:Description>
+                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000</xsd:minInclusive>
+                                            </rdf:Description>
+                                        </owl:withRestrictions>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasLanguage"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#numParameters"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000000</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Model -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Model">
+        <rdfs:comment>Mathematical or computational representation of a system or process used in machine learning to make predictions or decisions based on input data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ModelArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ModelArchitecture">
+        <rdfs:comment>structure and design of a model that determine how it processes data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#MultimodalDataset -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#MultimodalDataset">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset"/>
+        <rdfs:comment>Collection of data from multiple sources or modalities, used for training, validating, and testing a model</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/semsys/ns/swemls#Task"/>
+        <rdfs:comment>NLP task a model can solve</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ModelArchitecture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasActivationFunction"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RuleBasedArchitecture"/>
+        <rdfs:comment>defines the configuration of a neural network</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkLanguageModel -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NeuralNetworkLanguageModel">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LanguageModel"/>
+        <rdfs:comment>Language model that employs neural network architecture</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NgramLanguageModel -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NgramLanguageModel">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LanguageModel"/>
+        <rdfs:comment>language model predicts the probability of a word based on the previous  n−1 words in a sequence, using statistical methods to analyze word co-occurrences</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RNNArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RNNArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DeepLearningArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RuleBasedArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RuleBasedArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ModelArchitecture"/>
+        <rdfs:comment>system design that relies on predefined rules and logical conditions to process input data and make decisions rather than learning from data</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#SelfAttentionMechanism -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#SelfAttentionMechanism">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#AttentionMechanism"/>
+        <rdfs:comment>Computational technique that enables a model to weigh the relevance of different parts of an input sequence to one another, enhancing context capture</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TextDataset -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TextDataset">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#Dataset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasLanguage"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Collection of textual data used for training, validating, and testing a model</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TransformerArchitecture -->
+
+    <owl:Class rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TransformerArchitecture">
+        <rdfs:subClassOf rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DeepLearningArchitecture"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#hasPositionalEncoding"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semsys/ns/swemls#ApplicationDomain -->
+
+    <owl:Class rdf:about="https://w3id.org/semsys/ns/swemls#ApplicationDomain">
+        <rdfs:comment>Specific area of interest to which a model can be applied</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semsys/ns/swemls#Task -->
+
+    <owl:Class rdf:about="https://w3id.org/semsys/ns/swemls#Task">
+        <rdfs:comment>Task a model can be used for</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/semsys/ns/swemls#TrainingType -->
+
+    <owl:Class rdf:about="https://w3id.org/semsys/ns/swemls#TrainingType">
+        <rdfs:comment>method or approach used to train a model</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://semantic-systems.net/swemls/Domain.E-Commerce -->
+
+    <owl:NamedIndividual rdf:about="http://semantic-systems.net/swemls/Domain.E-Commerce">
+        <rdf:type rdf:resource="https://w3id.org/semsys/ns/swemls#ApplicationDomain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic-systems.net/swemls/Domain.Medicine_Health -->
+
+    <owl:NamedIndividual rdf:about="http://semantic-systems.net/swemls/Domain.Medicine_Health">
+        <rdf:type rdf:resource="https://w3id.org/semsys/ns/swemls#ApplicationDomain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic-systems.net/swemls/Domain.Social_Media -->
+
+    <owl:NamedIndividual rdf:about="http://semantic-systems.net/swemls/Domain.Social_Media">
+        <rdf:type rdf:resource="https://w3id.org/semsys/ns/swemls#ApplicationDomain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic-systems.net/swemls/TrainingType.Self_supervised -->
+
+    <owl:NamedIndividual rdf:about="http://semantic-systems.net/swemls/TrainingType.Self_supervised">
+        <rdf:type rdf:resource="https://w3id.org/semsys/ns/swemls#TrainingType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic-systems.net/swemls/TrainingType.Supervised -->
+
+    <owl:NamedIndividual rdf:about="http://semantic-systems.net/swemls/TrainingType.Supervised">
+        <rdf:type rdf:resource="https://w3id.org/semsys/ns/swemls#TrainingType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://semantic-systems.net/swemls/TrainingType.Unsupervised -->
+
+    <owl:NamedIndividual rdf:about="http://semantic-systems.net/swemls/TrainingType.Unsupervised">
+        <rdf:type rdf:resource="https://w3id.org/semsys/ns/swemls#TrainingType"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bert -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bert">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel"/>
+        <isTrainedOn rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bookcorpus"/>
+        <releasedBy rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#google"/>
+        <swemls:hasTask rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#languagegeneration"/>
+        <swemls:hasTrainingType rdf:resource="http://semantic-systems.net/swemls/TrainingType.Unsupervised"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+        <isOpenSource rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isOpenSource>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bertarchitecture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bertarchitecture">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#EncoderArchitecture"/>
+        <hasActivationFunction rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gelu"/>
+        <numAttentionHeads rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</numAttentionHeads>
+        <numLayers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numLayers>
+        <numParameters rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110000000</numParameters>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bookcorpus -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#bookcorpus">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TextDataset"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+        <trainingSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9850000</trainingSize>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#eliza -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#eliza">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel"/>
+        <createdBy rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#josephweizenbaum"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gatedrecurrentunit -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gatedrecurrentunit">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RNNArchitecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gelu -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gelu">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#google -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#google">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt2 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt2">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel"/>
+        <isTrainedOn rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#webtext"/>
+        <releasedBy rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#openai"/>
+        <swemls:hasTrainingType rdf:resource="http://semantic-systems.net/swemls/TrainingType.Unsupervised"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt2architecture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt2architecture">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DecoderArchitecture"/>
+        <numAttentionHeads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numAttentionHeads>
+        <numLayers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</numLayers>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt3 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt3">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel"/>
+        <isTrainedOn rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#webtext"/>
+        <releasedBy rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#openai"/>
+        <swemls:hasTrainingType rdf:resource="http://semantic-systems.net/swemls/TrainingType.Unsupervised"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+        <isOpenSource rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOpenSource>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt3architecture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt3architecture">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DecoderArchitecture"/>
+        <numAttentionHeads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</numAttentionHeads>
+        <numLayers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</numLayers>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt4 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt4">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel"/>
+        <isTrainedOn rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#webtext"/>
+        <releasedBy rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#openai"/>
+        <swemls:hasTrainingType rdf:resource="http://semantic-systems.net/swemls/TrainingType.Supervised"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+        <isOpenSource rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isOpenSource>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt4architecture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gpt4architecture">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DecoderArchitecture"/>
+        <numLayers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</numLayers>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#josephweizenbaum -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#josephweizenbaum">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1#Person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#languagegeneration -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#languagegeneration">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#llama -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#llama">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#LargeLanguageModel"/>
+        <isTrainedOn rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#webtext"/>
+        <releasedBy rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#meta"/>
+        <swemls:hasTrainingType rdf:resource="http://semantic-systems.net/swemls/TrainingType.Self_supervised"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#llamaarchitecture -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#llamaarchitecture">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#DecoderArchitecture"/>
+        <hasActivationFunction rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#gelu"/>
+        <numAttentionHeads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</numAttentionHeads>
+        <numLayers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</numLayers>
+        <numParameters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6700000000</numParameters>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#lstm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#lstm">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RNNArchitecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#machinetranslation -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#machinetranslation">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#meta -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#meta">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#multiheadattention -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#multiheadattention">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#SelfAttentionMechanism"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#namedentityrecognition -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#namedentityrecognition">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#openai -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#openai">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#postagging -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#postagging">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#relu -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#relu">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#sentimentanalysis -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#sentimentanalysis">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#NaturalLanguageProcessingTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#sigmoid -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#sigmoid">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#simplernn -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#simplernn">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#RNNArchitecture"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#softmax -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#softmax">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#ActivationFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/a-sadl21/LLM-Ontology/LLMOnto#webtext -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#webtext">
+        <rdf:type rdf:resource="https://github.com/a-sadl21/LLM-Ontology/LLMOnto#TextDataset"/>
+        <hasLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</hasLanguage>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
